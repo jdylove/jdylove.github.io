@@ -3,37 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>keynote 技巧分享 | hello</title>
+  <title>the relationship of FT,DFT, DTFT,DFS and FFT | hello</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="keynote 中有个 draw with pen 功能，可以很方便做出手绘效果，bi格满满。关键点如下：
-
-放入图片，用 draw with pen 勾轮廓，并进行微调。
-把线调为白色，深色背景最佳。
-配合音乐进行操作可有效排除烦躁感。
-
-效果如下：">
+  <meta name="description" content="In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.
+Based on the learning of convolution, we all">
 <meta property="og:type" content="article">
-<meta property="og:title" content="keynote 技巧分享">
-<meta property="og:url" content="http://yoursite.com/2015/09/16/fist/index.html">
+<meta property="og:title" content="the relationship of FT,DFT, DTFT,DFS and FFT">
+<meta property="og:url" content="http://yoursite.com/2015/09/23/ft/index.html">
 <meta property="og:site_name" content="hello">
-<meta property="og:description" content="keynote 中有个 draw with pen 功能，可以很方便做出手绘效果，bi格满满。关键点如下：
-
-放入图片，用 draw with pen 勾轮廓，并进行微调。
-把线调为白色，深色背景最佳。
-配合音乐进行操作可有效排除烦躁感。
-
-效果如下：">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew4e427ftwj20sg0lc42x.jpg">
-<meta property="og:updated_time" content="2015-09-16T09:28:06.000Z">
+<meta property="og:description" content="In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.
+Based on the learning of convolution, we all">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewcpxoarirj20o10oqafi.jpg">
+<meta property="og:updated_time" content="2015-09-23T13:54:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="keynote 技巧分享">
-<meta name="twitter:description" content="keynote 中有个 draw with pen 功能，可以很方便做出手绘效果，bi格满满。关键点如下：
-
-放入图片，用 draw with pen 勾轮廓，并进行微调。
-把线调为白色，深色背景最佳。
-配合音乐进行操作可有效排除烦躁感。
-
-效果如下：">
+<meta name="twitter:title" content="the relationship of FT,DFT, DTFT,DFS and FFT">
+<meta name="twitter:description" content="In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.
+Based on the learning of convolution, we all">
   
     <link rel="alternative" href="/atom.xml" title="hello" type="application/atom+xml">
   
@@ -197,11 +182,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-fist" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ft" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/09/16/fist/" class="article-date">
-  	<time datetime="2015-09-16T08:56:07.000Z" itemprop="datePublished">2015-09-16</time>
+      <a href="/2015/09/23/ft/" class="article-date">
+  	<time datetime="2015-09-23T13:41:46.000Z" itemprop="datePublished">2015-09-23</time>
 </a>
     </div>
   
@@ -214,7 +199,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      keynote 技巧分享
+      the relationship of FT,DFT, DTFT,DFS and FFT
     </h1>
   
 
@@ -223,7 +208,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fun/">fun</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li></ul>
 	</div>
 
         
@@ -234,13 +219,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>keynote 中有个 draw with pen 功能，可以很方便做出手绘效果，bi格满满。<br>关键点如下：</p>
-<ul>
-<li>放入图片，用 draw with pen 勾轮廓，并进行微调。</li>
-<li>把线调为白色，深色背景最佳。</li>
-<li>配合音乐进行操作可有效排除烦躁感。</li>
-</ul>
-<p>效果如下：<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew4e427ftwj20sg0lc42x.jpg" alt="image1"></p>
+        <p>In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.</p>
+<p>Based on the learning of convolution, we all have known the domain convolution theorem and the frequency domain convolution theorem. Here we mainly need to remember two properties: </p>
+<ol>
+<li>Multiplying in a domain equals doing convolution in another domain.</li>
+<li>If we do convolution with the impulse response, there will be a waveform image at the position of each impulse. (In any one of the signals and systems textbooks, there is evidence details the nature of the two formulas)</li>
+</ol>
+<p><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewcpxoarirj20o10oqafi.jpg" alt="image"></p>
+<p>First let’s look at images (1) and (2), to an analog signal, as shown in (1), if we want to get its frequency compo-nents, we should analyze it from the frequency domain, the procedure through the transformation is called Fourier transform (FT), as shown in (2).</p>
+<blockquote>
+<p>Note 1: that the time domain and frequency domain are both continuous for the images (1) and (2).</p>
+</blockquote>
+<p>However, as the computer can only handle digital signals, the original analog signal ought to be discretization first in the time domain, which means doing sampling in the time domain. The sampling impulse sequence is shown in (3), the frequency spectrum of the sample sequence is shown in (4), and here we can find its spectrum is also a series of pulses. When we do the sampling in the time domain, the original signal is multiplied by the impulse se-quences, by operating (1) × (3), we get the image (5); by the property 1, the time domain multiplying equals the convolution in frequency domain. then the image(2) and image(4) do convolution, again according to the previ-ous knowledge of property 2, there will be mirror images at each impulse points, thereby we finally obtain im-age(6), it is right the DTFT of image(5) (Discrete time Fourier Transform). </p>
+<blockquote>
+<p>Note 2: At image(5) and (6), the time domain is discrete, but the frequency domain is still continuous.</p>
+</blockquote>
+<p>After the above two steps, the signal we get still cannot be processed by computer. It is because the frequency domain is continuous and periodic. The direct thought is since the time domain can be sampled, how about sample in the frequency domain again? Yes, the next step is right doing sampling in the frequency domain; the spectrum of frequency sampling signal is shown in image(8), and its time-domain waveform is shown in image(7). Now we sample frequency domain by multiplying image(6) with image(8) to get image(10), we take the main interval of period sequence in image(10), and referred to as X (k), it is DFT (Discrete Fourier Transform) of the sequence x [n]. therefore it is clear that the DFT only aims to facilitate computer processing, do the frequency sampling of DTFT. </p>
+<p>How about FFT? The nature of FFT is DFT! FFT presents only in order to quickly calculate DFT. We used the signal processing software package like MATLAB, FFT algorithm is included instead of DFT.<br>DFS is raised for the periodic time-domain signal. if we do DFS of image(9), we get image(10),so the essence of DFS and DFT is the same, but the described method is different. In fact, talked so much, the purpose is to break the boundaries between the real analog world and the digital world of computer.</p>
 
       
     </div>
@@ -250,18 +245,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/17/instagram-setting/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          hexo-yilia主题 instagram 抓取设置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2015/09/17/instagram-setting/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo-yilia主题 instagram 抓取设置</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -290,7 +276,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="fist" data-title="keynote 技巧分享" data-url="http://yoursite.com/2015/09/16/fist/"></div>
+	<div class="ds-thread" data-thread-key="ft" data-title="the relationship of FT,DFT, DTFT,DFS and FFT" data-url="http://yoursite.com/2015/09/23/ft/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
