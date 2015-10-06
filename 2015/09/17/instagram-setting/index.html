@@ -225,40 +225,40 @@ Hexo主题Yilia
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>整理自：</p>
-<p><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87" target="_blank" rel="external">Hexo主题Yilia</a></p>
-<p><a href="http://litten.github.io/2014/03/03/instagram-api-ex/" target="_blank" rel="external">拉取图片经验</a></p>
-<p>步骤如下：(不考虑被墙情况)</p>
-<h2 id="1-_新建页面">1. 新建页面</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"instagram"</span></span><br></pre></td></tr></table></figure>
+        <p>&#x6574;&#x7406;&#x81EA;&#xFF1A;</p>
+<p><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87" target="_blank" rel="external">Hexo&#x4E3B;&#x9898;Yilia</a></p>
+<p><a href="http://litten.github.io/2014/03/03/instagram-api-ex/" target="_blank" rel="external">&#x62C9;&#x53D6;&#x56FE;&#x7247;&#x7ECF;&#x9A8C;</a></p>
+<p>&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;(&#x4E0D;&#x8003;&#x8651;&#x88AB;&#x5899;&#x60C5;&#x51B5;)</p>
+<h2 id="1-&#x65B0;&#x5EFA;&#x9875;&#x9762;">1. &#x65B0;&#x5EFA;&#x9875;&#x9762;</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">&quot;instagram&quot;</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="2-_修改index-md">2. 修改index.md</h2><p>在目录yourBlog\source\instagram下，修改index.md内容为：</p>
+<h2 id="2-&#x4FEE;&#x6539;indexmd">2. &#x4FEE;&#x6539;index.md</h2><p>&#x5728;&#x76EE;&#x5F55;yourBlog\source\instagram&#x4E0B;&#xFF0C;&#x4FEE;&#x6539;index.md&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
 <pre><code><span class="comment">---</span>
 layout: post
-slug: <span class="string">"instagram"</span>
-title: <span class="string">"相册"</span>
-noDate: <span class="string">"true"</span>
+slug: <span class="string">&quot;instagram&quot;</span>
+title: <span class="string">&quot;&#x76F8;&#x518C;&quot;</span>
+noDate: <span class="string">&quot;true&quot;</span>
 <span class="comment">---</span>
 
-&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"instagram"</span> data-client-<span class="property">id</span>=<span class="string">"ecfe77c0eb964a818361fbfaed595814"</span> data-user-<span class="property">id</span>=<span class="string">"7372224"</span>&gt;
-    &lt;a href=<span class="string">"http://instagram.com/jdongyang"</span> target=<span class="string">"_blank"</span> <span class="type">class</span>=<span class="string">"open-ins"</span>&gt;图片来自instagram，正在加载中…&lt;/a&gt;
+&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">&quot;instagram&quot;</span> data-client-<span class="property">id</span>=<span class="string">&quot;ecfe77c0eb964a818361fbfaed595814&quot;</span> data-user-<span class="property">id</span>=<span class="string">&quot;7372224&quot;</span>&gt;
+    &lt;a href=<span class="string">&quot;http://instagram.com/jdongyang&quot;</span> target=<span class="string">&quot;_blank&quot;</span> <span class="type">class</span>=<span class="string">&quot;open-ins&quot;</span>&gt;&#x56FE;&#x7247;&#x6765;&#x81EA;instagram&#xFF0C;&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x4E2D;&#x2026;&lt;/a&gt;
 &lt;/<span class="keyword">div</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">"http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">"/js/jquery.lazyload.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">"/js/instagram.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-</code></pre><h2 id="3-_修改参数">3. 修改参数</h2><p><strong>data-client-id</strong>在 instagram api 注册后获得：<br>注意 redirect url 填你自己 blog 名：<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ew5bbxct1mj20ld0a8abc.jpg" alt=""><br>然后把有关的安全选项关闭：<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew5bd5i4qdj20kn0fjjtf.jpg" alt=""><br>接下去获取验证(Client-Side (Implicit) Authentication)，这里我直接引用 instagram 官方文档：</p>
+&lt;<span class="keyword">script</span> src=<span class="string">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+&lt;<span class="keyword">script</span> src=<span class="string">&quot;/js/jquery.lazyload.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+&lt;<span class="keyword">script</span> src=<span class="string">&quot;/js/instagram.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+</code></pre><h2 id="3-&#x4FEE;&#x6539;&#x53C2;&#x6570;">3. &#x4FEE;&#x6539;&#x53C2;&#x6570;</h2><p><strong>data-client-id</strong>&#x5728; instagram api &#x6CE8;&#x518C;&#x540E;&#x83B7;&#x5F97;&#xFF1A;<br>&#x6CE8;&#x610F; redirect url &#x586B;&#x4F60;&#x81EA;&#x5DF1; blog &#x540D;&#xFF1A;<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ew5bbxct1mj20ld0a8abc.jpg" alt=""><br>&#x7136;&#x540E;&#x628A;&#x6709;&#x5173;&#x7684;&#x5B89;&#x5168;&#x9009;&#x9879;&#x5173;&#x95ED;&#xFF1A;<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew5bd5i4qdj20kn0fjjtf.jpg" alt=""><br>&#x63A5;&#x4E0B;&#x53BB;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;(Client-Side (Implicit) Authentication)&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x76F4;&#x63A5;&#x5F15;&#x7528; instagram &#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;</p>
 <p><strong><em>Step One: Direct your user to our authorization URL</em></strong></p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/instagram.com/oauth</span><span class="regexp">/authorize/</span>?client_id=&#123;<span class="constant">CLIENT-ID&#125;</span>&amp;redirect_uri=&#123;<span class="constant">REDIRECT-URI&#125;</span>&amp;response_type=token</span><br></pre></td></tr></table></figure>
-<p><strong><del>注意不要把我的括号还留着</del></strong></p>
-<p>At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/instagram.com/oauth</span><span class="regexp">/authorize/</span>?client_id={<span class="constant">CLIENT-ID}</span>&amp;redirect_uri={<span class="constant">REDIRECT-URI}</span>&amp;response_type=token</span><br></pre></td></tr></table></figure>
+<p><strong><del>&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x628A;&#x6211;&#x7684;&#x62EC;&#x53F7;&#x8FD8;&#x7559;&#x7740;</del></strong></p>
+<p>At this point, we present the user with a login screen and then a confirmation screen where they grant your app&#x2019;s access to their Instagram data. Note that unlike the explicit flow the response type here is &#x201C;token&#x201D;.</p>
 <p><strong><em>Step Two: Receive the access_token via the URL fragment</em></strong></p>
 <p>Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">http:</span>//your-redirect-uri<span class="preprocessor">#access_token=ACCESS-TOKEN</span></span><br></pre></td></tr></table></figure>
-<p>Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow</p>
-<p>那这样就拿到 token 了。</p>
-<p>另外, <strong>data-user-id</strong>属性，需要到<a href="http://jelled.com/instagram/lookup-user-id#" target="_blank" rel="external">lookup-user-id</a>查找并填写。</p>
-<p>赶紧试着用token调用api查看自己的图片吧：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https</span>:<span class="regexp">//</span>api.instagram.com<span class="regexp">/v1/users/</span>&#123;USER_ID&#125;<span class="regexp">/media/recent/</span>?access_token=&#123;TOKEN&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-_hexo_and_enjoy">4. hexo and enjoy</h2><p>应该可以了吧（笑）</p>
+<p>Simply grab the access_token off the URL fragment and you&#x2019;re good to go. If the user chooses not to authorize your application, you&#x2019;ll receive the same error response as in the explicit flow</p>
+<p>&#x90A3;&#x8FD9;&#x6837;&#x5C31;&#x62FF;&#x5230; token &#x4E86;&#x3002;</p>
+<p>&#x53E6;&#x5916;, <strong>data-user-id</strong>&#x5C5E;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x5230;<a href="http://jelled.com/instagram/lookup-user-id#" target="_blank" rel="external">lookup-user-id</a>&#x67E5;&#x627E;&#x5E76;&#x586B;&#x5199;&#x3002;</p>
+<p>&#x8D76;&#x7D27;&#x8BD5;&#x7740;&#x7528;token&#x8C03;&#x7528;api&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x56FE;&#x7247;&#x5427;&#xFF1A;</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https</span>:<span class="regexp">//</span>api.instagram.com<span class="regexp">/v1/users/</span>{USER_ID}<span class="regexp">/media/recent/</span>?access_token={TOKEN}</span><br></pre></td></tr></table></figure>
+<h2 id="4-hexo-and-enjoy">4. hexo and enjoy</h2><p>&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x4E86;&#x5427;&#xFF08;&#x7B11;&#xFF09;</p>
 
       
     </div>
