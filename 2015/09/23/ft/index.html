@@ -178,87 +178,125 @@ Based on the learning of convolution, we all">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%if(post.noDate != "true"){%>
+      <div class="body-wrap"><article id="post-ft" class="article article-type-post" itemscope itemprop="blogPost">
+  
     <div class="article-meta">
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <a href="/2015/09/23/ft/" class="article-date">
+  	<time datetime="2015-09-23T13:41:46.000Z" itemprop="datePublished">2015-09-23</time>
+</a>
     </div>
-  <%}%>
+  
   <div class="article-inner">
-    <% if (theme.fancybox){ %>
+    
       <input type="hidden" class="isFancy" />
-    <% } %>
-    <% if (post.link || post.title){ %>
+    
+    
       <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      the relationship of FT,DFT, DTFT,DFS and FFT
+    </h1>
+  
+
       </header>
-      <% if (!index){ %>
+      
       <div class="article-info article-info-post">
-        <%- partial('post/tag') %>
-        <%- partial('post/category') %>
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
+	</div>
+
+        
+
         <div class="clearfix"></div>
       </div>
-      <% } %>
-    <% } %>
+      
+    
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
+      
+        <p>In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.</p>
+<p>Based on the learning of convolution, we all have known the domain convolution theorem and the frequency domain convolution theorem. Here we mainly need to remember two properties: </p>
+<ol>
+<li>Multiplying in a domain equals doing convolution in another domain.</li>
+<li>If we do convolution with the impulse response, there will be a waveform image at the position of each impulse. (In any one of the signals and systems textbooks, there is evidence details the nature of the two formulas)</li>
+</ol>
+<p><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewcpxoarirj20o10oqafi.jpg" alt="image"></p>
+<p>First let&#x2019;s look at images (1) and (2), to an analog signal, as shown in (1), if we want to get its frequency compo-nents, we should analyze it from the frequency domain, the procedure through the transformation is called Fourier transform (FT), as shown in (2).</p>
+<blockquote>
+<p>Note 1: that the time domain and frequency domain are both continuous for the images (1) and (2).<br><a id="more"></a><br>However, as the computer can only handle digital signals, the original analog signal ought to be discretization first in the time domain, which means doing sampling in the time domain. The sampling impulse sequence is shown in (3), the frequency spectrum of the sample sequence is shown in (4), and here we can find its spectrum is also a series of pulses. When we do the sampling in the time domain, the original signal is multiplied by the impulse se-quences, by operating (1) &#xD7; (3), we get the image (5); by the property 1, the time domain multiplying equals the convolution in frequency domain. then the image(2) and image(4) do convolution, again according to the previ-ous knowledge of property 2, there will be mirror images at each impulse points, thereby we finally obtain im-age(6), it is right the DTFT of image(5) (Discrete time Fourier Transform).<br>Note 2: At image(5) and (6), the time domain is discrete, but the frequency domain is still continuous.</p>
+</blockquote>
+<p>After the above two steps, the signal we get still cannot be processed by computer. It is because the frequency domain is continuous and periodic. The direct thought is since the time domain can be sampled, how about sample in the frequency domain again? Yes, the next step is right doing sampling in the frequency domain; the spectrum of frequency sampling signal is shown in image(8), and its time-domain waveform is shown in image(7). Now we sample frequency domain by multiplying image(6) with image(8) to get image(10), we take the main interval of period sequence in image(10), and referred to as X (k), it is DFT (Discrete Fourier Transform) of the sequence x [n]. therefore it is clear that the DFT only aims to facilitate computer processing, do the frequency sampling of DTFT. </p>
+<p>How about FFT? The nature of FFT is DFT! FFT presents only in order to quickly calculate DFT. We used the signal processing software package like MATLAB, FFT algorithm is included instead of DFT.<br>DFS is raised for the periodic time-domain signal. if we do DFS of image(9), we get image(10),so the essence of DFS and DFT is the same, but the described method is different. In fact, talked so much, the purpose is to break the boundaries between the real analog world and the digital world of computer.</p>
+
+      
     </div>
-    <% if (index){ %>
-    <div class="article-info article-info-index">
-      <%if(post.top){%>
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      <% } %>
-      <%- partial('post/tag') %>
-      <%- partial('post/category') %>
-      <% if (post.excerpt && index){ %>
-        <p class="article-more-link">
-          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
-        </p>
-      <% } %>
-      <div class="clearfix"></div>
-    </div>
-    <% } %>
+    
   </div>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/09/25/文摘1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+           文摘1-另一个世界像幽灵煽动它的鬼火
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/09/17/instagram-setting/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo-yilia主题 instagram 抓取设置</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-<% if (!index && theme.share){ %>
-<%- partial('post/share') %>
-<% } %>
 
-<% if (!index && theme.duoshuo && post.comments){ %>
-<%- partial('post/duoshuo', {
-    key: post.slug,
-    title: post.title,
-    url: config.url+url_for(post.path)
-  }) %>
-<% } %>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-<% } %>
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ft" data-title="the relationship of FT,DFT, DTFT,DFS and FFT" data-url="http://yoursite.com/2015/09/23/ft/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jdylove"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
