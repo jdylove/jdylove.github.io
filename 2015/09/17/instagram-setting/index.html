@@ -188,146 +188,87 @@ Hexo主题Yilia
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-instagram-setting" class="article article-type-post" itemscope itemprop="blogPost">
-  
+      <div class="body-wrap"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
     <div class="article-meta">
-      <a href="/2015/09/17/instagram-setting/" class="article-date">
-  	<time datetime="2015-09-17T03:34:05.000Z" itemprop="datePublished">2015-09-17</time>
-</a>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
-  
+  <%}%>
   <div class="article-inner">
-    
+    <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
-    
-    
+    <% } %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      hexo-yilia主题 instagram 抓取设置
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
-      
+      <% if (!index){ %>
       <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fun/">fun</a></li></ul>
-	</div>
-
-        
-
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
         <div class="clearfix"></div>
       </div>
-      
-    
+      <% } %>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x6574;&#x7406;&#x81EA;&#xFF1A;</p>
-<p><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87" target="_blank" rel="external">Hexo&#x4E3B;&#x9898;Yilia</a></p>
-<p><a href="http://litten.github.io/2014/03/03/instagram-api-ex/" target="_blank" rel="external">&#x62C9;&#x53D6;&#x56FE;&#x7247;&#x7ECF;&#x9A8C;</a></p>
-<p>&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;(&#x4E0D;&#x8003;&#x8651;&#x88AB;&#x5899;&#x60C5;&#x51B5;)</p>
-<h2 id="1-&#x65B0;&#x5EFA;&#x9875;&#x9762;">1. &#x65B0;&#x5EFA;&#x9875;&#x9762;</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">&quot;instagram&quot;</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-&#x4FEE;&#x6539;indexmd">2. &#x4FEE;&#x6539;index.md</h2><p>&#x5728;&#x76EE;&#x5F55;yourBlog\source\instagram&#x4E0B;&#xFF0C;&#x4FEE;&#x6539;index.md&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
-<pre><code><span class="comment">---</span>
-layout: post
-slug: <span class="string">&quot;instagram&quot;</span>
-title: <span class="string">&quot;&#x76F8;&#x518C;&quot;</span>
-noDate: <span class="string">&quot;true&quot;</span>
-<span class="comment">---</span>
-
-&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">&quot;instagram&quot;</span> data-client-<span class="property">id</span>=<span class="string">&quot;ecfe77c0eb964a818361fbfaed595814&quot;</span> data-user-<span class="property">id</span>=<span class="string">&quot;7372224&quot;</span>&gt;
-    &lt;a href=<span class="string">&quot;http://instagram.com/jdongyang&quot;</span> target=<span class="string">&quot;_blank&quot;</span> <span class="type">class</span>=<span class="string">&quot;open-ins&quot;</span>&gt;&#x56FE;&#x7247;&#x6765;&#x81EA;instagram&#xFF0C;&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x4E2D;&#x2026;&lt;/a&gt;
-&lt;/<span class="keyword">div</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">&quot;/js/jquery.lazyload.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-&lt;<span class="keyword">script</span> src=<span class="string">&quot;/js/instagram.js&quot;</span>&gt;&lt;/<span class="keyword">script</span>&gt;
-</code></pre><h2 id="3-&#x4FEE;&#x6539;&#x53C2;&#x6570;">3. &#x4FEE;&#x6539;&#x53C2;&#x6570;</h2><p><strong>data-client-id</strong>&#x5728; instagram api &#x6CE8;&#x518C;&#x540E;&#x83B7;&#x5F97;&#xFF1A;<br>&#x6CE8;&#x610F; redirect url &#x586B;&#x4F60;&#x81EA;&#x5DF1; blog &#x540D;&#xFF1A;<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ew5bbxct1mj20ld0a8abc.jpg" alt=""><br>&#x7136;&#x540E;&#x628A;&#x6709;&#x5173;&#x7684;&#x5B89;&#x5168;&#x9009;&#x9879;&#x5173;&#x95ED;&#xFF1A;<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew5bd5i4qdj20kn0fjjtf.jpg" alt=""><br>&#x63A5;&#x4E0B;&#x53BB;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;(Client-Side (Implicit) Authentication)&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x76F4;&#x63A5;&#x5F15;&#x7528; instagram &#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;</p>
-<p><strong><em>Step One: Direct your user to our authorization URL</em></strong></p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/instagram.com/oauth</span><span class="regexp">/authorize/</span>?client_id={<span class="constant">CLIENT-ID}</span>&amp;redirect_uri={<span class="constant">REDIRECT-URI}</span>&amp;response_type=token</span><br></pre></td></tr></table></figure>
-<p><strong><del>&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x628A;&#x6211;&#x7684;&#x62EC;&#x53F7;&#x8FD8;&#x7559;&#x7740;</del></strong></p>
-<p>At this point, we present the user with a login screen and then a confirmation screen where they grant your app&#x2019;s access to their Instagram data. Note that unlike the explicit flow the response type here is &#x201C;token&#x201D;.</p>
-<p><strong><em>Step Two: Receive the access_token via the URL fragment</em></strong></p>
-<p>Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">http:</span>//your-redirect-uri<span class="preprocessor">#access_token=ACCESS-TOKEN</span></span><br></pre></td></tr></table></figure>
-<p>Simply grab the access_token off the URL fragment and you&#x2019;re good to go. If the user chooses not to authorize your application, you&#x2019;ll receive the same error response as in the explicit flow</p>
-<p>&#x90A3;&#x8FD9;&#x6837;&#x5C31;&#x62FF;&#x5230; token &#x4E86;&#x3002;</p>
-<p>&#x53E6;&#x5916;, <strong>data-user-id</strong>&#x5C5E;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x5230;<a href="http://jelled.com/instagram/lookup-user-id#" target="_blank" rel="external">lookup-user-id</a>&#x67E5;&#x627E;&#x5E76;&#x586B;&#x5199;&#x3002;</p>
-<p>&#x8D76;&#x7D27;&#x8BD5;&#x7740;&#x7528;token&#x8C03;&#x7528;api&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x56FE;&#x7247;&#x5427;&#xFF1A;</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https</span>:<span class="regexp">//</span>api.instagram.com<span class="regexp">/v1/users/</span>{USER_ID}<span class="regexp">/media/recent/</span>?access_token={TOKEN}</span><br></pre></td></tr></table></figure>
-<h2 id="4-hexo-and-enjoy">4. hexo and enjoy</h2><p>&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x4E86;&#x5427;&#xFF08;&#x7B11;&#xFF09;</p>
-
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
-    
+    <% if (index){ %>
+    <div class="article-info article-info-index">
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
+        <p class="article-more-link">
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+        </p>
+      <% } %>
+      <div class="clearfix"></div>
+    </div>
+    <% } %>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/09/23/ft/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          the relationship of FT,DFT, DTFT,DFS and FFT
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/09/16/fist/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">keynote 技巧分享</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
 
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="instagram-setting" data-title="hexo-yilia主题 instagram 抓取设置" data-url="http://yoursite.com/2015/09/17/instagram-setting/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"jdylove"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 </div>
       <footer id="footer">
   <div class="outer">

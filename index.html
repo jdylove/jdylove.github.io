@@ -175,325 +175,419 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-TI-SDM-basic" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
     <div class="article-meta">
-      <a href="/2015/10/06/TI-SDM-basic/" class="article-date">
-  	<time datetime="2015-10-06T09:00:28.000Z" itemprop="datePublished">2015-10-06</time>
-</a>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
-  
+  <%}%>
   <div class="article-inner">
-    
+    <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
-    
-    
+    <% } %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/06/TI-SDM-basic/">the baisc model of time-interleaved sigma-deta converters</a>
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
-      
-    
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>&#x76EE;&#x5F55;&#xFF1A;</strong></p>
-<!-- toc -->
-<ul>
-<li><a href="#the-firsrt-chatper">the firsrt chatper</a><ul>
-<li><a href="#conventional-second-order">conventional second-order</a></li>
-<li><a href="#type-i-block-digital-filtering">Type-I block digital filtering</a></li>
-<li><a href="#type-ii-output-prediction-scheme">Type-II output prediction scheme</a></li>
-<li><a href="#supplement">supplement</a><ul>
-<li><a href="#1-zi-ti">1. ZI-TI</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<h1 id="the-firsrt-chatper">the firsrt chatper</h1><h2 id="conventional-second-order">conventional second-order</h2><h2 id="type-i-block-digital-filtering">Type-I block digital filtering</h2><h2 id="type-ii-output-prediction-scheme">Type-II output prediction scheme</h2><h2 id="supplement">supplement</h2><h3 id="1-zi-ti">1. ZI-TI</h3>
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
-    
+    <% if (index){ %>
     <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-文摘1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/25/文摘1/" class="article-date">
-  	<time datetime="2015-09-25T12:48:10.000Z" itemprop="datePublished">2015-09-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/25/文摘1/"> 文摘1-另一个世界像幽灵煽动它的鬼火</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>版权申明：本文系凤凰新闻客户端独家稿件，转载请注明“凤凰新闻客户端主笔王路”，并通知mayj@ifeng.com</p>
-<hr>
-<p>高考已经过去很多年了，我还是常常做梦，梦见考试，满篇的题都不会做，再在极度紧张和焦虑中醒来。有个高中同学已经在高校任教了，我们喝酒聊起这事，他说他也是。他还说他的老板，一个快要评上院士的老教授，也这样。</p>
-<p>梦里，我常回到离高考还有半年或者一年那么短的时间，然后忧虑自己能不能考上一所好大学。有时又好像觉得自己似乎读过大学，梦里明明身在高中却担忧自己能不能本科毕业，没有丝毫逻辑可言。碰到考试，对着空白的试卷一道题也不会。突然一觉惊醒，躺在床上面对黑暗的房间，我才意识到自己已经毕业好些年了。想到梦里那些担忧多是多余的，不禁狂喜。想想过往，那些年念书也受了不少苦，又感到慰藉。总之，看那个小孩就好像看别人家孩子似的，对他的坚强有一种顾影自怜的爱意。放在今天，打死都不肯早上五点多冒着风雪起床，深一脚浅一脚地踩着积雪走到学校上早读。然后不禁感叹：我小时候真是好学生。</p>
-<p>好学生有他的毛病。凭空生出一种想当然的优越感，以为自己理应得到所有的荣誉和赞美，得到周围众人嘉许的目光，以为未来的世界是属于自己的，甚至以为班花校花都会高看自己一眼。多亏这些虚妄的想象，好学生才有可能在那么多年里把苦逼的生活过得
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文摘/">文摘</a></li></ul>
-	</div>
-
-      
-
-      
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
         <p class="article-more-link">
-          <a  href="/2015/09/25/文摘1/#more">more >></a>
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
         </p>
-      
+      <% } %>
       <div class="clearfix"></div>
     </div>
-    
+    <% } %>
   </div>
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
 
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
-
-
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 
   
-    <article id="post-ft" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
     <div class="article-meta">
-      <a href="/2015/09/23/ft/" class="article-date">
-  	<time datetime="2015-09-23T13:41:46.000Z" itemprop="datePublished">2015-09-23</time>
-</a>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
-  
+  <%}%>
   <div class="article-inner">
-    
+    <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
-    
-    
+    <% } %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/23/ft/">the relationship of FT,DFT, DTFT,DFS and FFT</a>
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
-      
-    
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>In order to be not confused with the DSP terminologies, here we list the figure that can show the relationship be-tween them. The matlab code is attached.</p>
-<p>Based on the learning of convolution, we all have known the domain convolution theorem and the frequency domain convolution theorem. Here we mainly need to remember two properties: </p>
-<ol>
-<li>Multiplying in a domain equals doing convolution in another domain.</li>
-<li>If we do convolution with the impulse response, there will be a waveform image at the position of each impulse. (In any one of the signals and systems textbooks, there is evidence details the nature of the two formulas)</li>
-</ol>
-<p><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewcpxoarirj20o10oqafi.jpg" alt="image"></p>
-<p>First let’s look at images (1) and (2), to an analog signal, as shown in (1), if we want to get its frequency compo-nents, we should analyze it from the frequency domain, the procedure through the transformation is called Fourier transform (FT), as shown in (2).</p>
-<blockquote>
-<p>Note 1: that the time domain and frequency domain are both continuous for the images (1) and (2).<br>
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
-    
+    <% if (index){ %>
     <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
-	</div>
-
-      
-
-      
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
         <p class="article-more-link">
-          <a  href="/2015/09/23/ft/#more">more >></a>
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
         </p>
-      
+      <% } %>
       <div class="clearfix"></div>
     </div>
-    
+    <% } %>
   </div>
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
 
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
-
-
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 
   
-    <article id="post-instagram-setting" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
     <div class="article-meta">
-      <a href="/2015/09/17/instagram-setting/" class="article-date">
-  	<time datetime="2015-09-17T03:34:05.000Z" itemprop="datePublished">2015-09-17</time>
-</a>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
-  
+  <%}%>
   <div class="article-inner">
-    
+    <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
-    
-    
+    <% } %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/17/instagram-setting/">hexo-yilia主题 instagram 抓取设置</a>
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
-      
-    
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>整理自：</p>
-<p><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87">Hexo主题Yilia</a></p>
-<p><a href="http://litten.github.io/2014/03/03/instagram-api-ex/">拉取图片经验</a></p>
-<p>步骤如下：(不考虑被墙情况)</p>
-<h2 id="1-_新建页面">1. 新建页面</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"instagram"</span></span><br></pre></td></tr></table></figure>
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
-    
+    <% if (index){ %>
     <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fun/">fun</a></li></ul>
-	</div>
-
-      
-
-      
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
         <p class="article-more-link">
-          <a  href="/2015/09/17/instagram-setting/#more">more >></a>
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
         </p>
-      
+      <% } %>
       <div class="clearfix"></div>
     </div>
-    
+    <% } %>
   </div>
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
 
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
-
-
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 
   
-    <article id="post-fist" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
     <div class="article-meta">
-      <a href="/2015/09/16/fist/" class="article-date">
-  	<time datetime="2015-09-16T08:56:07.000Z" itemprop="datePublished">2015-09-16</time>
-</a>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
-  
+  <%}%>
   <div class="article-inner">
-    
+    <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
-    
-    
+    <% } %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/16/fist/">keynote 技巧分享</a>
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </header>
-      
-    
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>keynote &#x4E2D;&#x6709;&#x4E2A; draw with pen &#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x505A;&#x51FA;&#x624B;&#x7ED8;&#x6548;&#x679C;&#xFF0C;bi&#x683C;&#x6EE1;&#x6EE1;&#x3002;<br>&#x5173;&#x952E;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>&#x653E;&#x5165;&#x56FE;&#x7247;&#xFF0C;&#x7528; draw with pen &#x52FE;&#x8F6E;&#x5ED3;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x5FAE;&#x8C03;&#x3002;</li>
-<li>&#x628A;&#x7EBF;&#x8C03;&#x4E3A;&#x767D;&#x8272;&#xFF0C;&#x6DF1;&#x8272;&#x80CC;&#x666F;&#x6700;&#x4F73;&#x3002;</li>
-<li>&#x914D;&#x5408;&#x97F3;&#x4E50;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x53EF;&#x6709;&#x6548;&#x6392;&#x9664;&#x70E6;&#x8E81;&#x611F;&#x3002;</li>
-</ul>
-<p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew4e427ftwj20sg0lc42x.jpg" alt="image1"></p>
-
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
-    
+    <% if (index){ %>
     <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fun/">fun</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/keynote/">keynote</a></li></ul>
-	</div>
-
-      
-
-      
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
+        <p class="article-more-link">
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+        </p>
+      <% } %>
       <div class="clearfix"></div>
     </div>
-    
+    <% } %>
   </div>
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
 
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 
+  
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%if(post.noDate != "true"){%>
+    <div class="article-meta">
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    </div>
+  <%}%>
+  <div class="article-inner">
+    <% if (theme.fancybox){ %>
+      <input type="hidden" class="isFancy" />
+    <% } %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+      <% if (!index){ %>
+      <div class="article-info article-info-post">
+        <%- partial('post/tag') %>
+        <%- partial('post/category') %>
+        <div class="clearfix"></div>
+      </div>
+      <% } %>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <% if (index){ %>
+    <div class="article-info article-info-index">
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+      <% if (post.excerpt && index){ %>
+        <p class="article-more-link">
+          <a <% if (!theme.excerpt_link){ %>class="hidden"<% } %> href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+        </p>
+      <% } %>
+      <div class="clearfix"></div>
+    </div>
+    <% } %>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
 
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
+
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+<% } %>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<%=config.disqus_shortname%>'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+<% } %>
 
   
   
