@@ -40,7 +40,7 @@ supplement
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg">
-<meta property="og:updated_time" content="2015-10-12T06:02:01.000Z">
+<meta property="og:updated_time" content="2015-10-12T06:07:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the basic model of time-interleaved sigma-deta converters">
 <meta name="twitter:description" content="&amp;#x76EE;&amp;#x5F55;&amp;#xFF1A;
@@ -285,10 +285,10 @@ supplement
 <p><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewyaf7n4dlj210z0c975p.jpg" alt="image"><br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg" alt="image"><br>the SNR=77.9dB,and we have 3dB loss, not has good as we expected, and I am looking for the reason, I think it may due to the stability.</p>
 <h2 id="supplement">supplement</h2><h3 id="1. ZI-TI">1. ZI-TI</h3><p>A high-speed demux is needed at the input of the modulator to sample the input-signal and distribute it to the individual internal modulators. The demux operates at the full speed of the overall TI structure. For example, for a time-interleaving factor of 4, the demux operates at four times the speed of the individual &#x2206;&#x3A3; modulators. </p>
 <p>A solution to the demux problem for J=2 is to sample each branch at a different phase of the two non-overlapping clocks. Therefore, the demux is inherent in the operation of the modulator. Another more general solution that can be used for any J is called the zero-insertion interpolation technique, it keeps one input J times the original input power, and leaves other inputs as zero. for example, we use this tech on the block digital filtering TI-SDM:<br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg" alt="image"><br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg" alt="image"><br>And by arranging the quantizer outputs, the performance losses 2dB, becoming 79.1dB, which is still acceptable. so it has two problems:</p>
-<ol>
+<ul>
 <li>The input signal amplification causes the ZITI modulator to become unstable at smaller input levels than the traditional TI modulator, because we will increase power at one input!</li>
 <li>The ZITI modulator still suffers from DC offsets, so I think it&#x2019;s not so suitable for low-pass case unless the DC offset tone is out of band of your interests.</li>
-</ol>
+</ul>
 <h3 id="2. output prediction scheme details">2. output prediction scheme details</h3><p>To be continue&#x2026;</p>
 <h2 id="comparison table">comparison table</h2><table>
 <thead>
