@@ -46,7 +46,7 @@ comparison tab">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg">
-<meta property="og:updated_time" content="2015-10-12T06:33:27.000Z">
+<meta property="og:updated_time" content="2015-10-12T08:52:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the basic model of time-interleaved sigma-deta converters">
 <meta name="twitter:description" content="目录：
@@ -275,8 +275,11 @@ comparison tab">
 <!-- tocstop -->
 <p>Here I just want to list the traditional interleaved techs as my back up, the simulations are done in matlab following the franco maloberti&#x2019;s setting, I hope I got a better understanding after the organization of papers and thesis.</p>
 <blockquote>
-<p>In this brief, i will not put too much math, just concentrate on keywords.<br><a id="more"></a></p>
-<h2 id="Conventional second-order">Conventional second-order</h2><p>The setting is as follows:<br>The output spectrum of the conventional second- order modulator and the proposed two-channel TI version with -6dBFS(not sure), 152.59-kHz sinusoidal input. For both modulators, the internal clock frequency was set to 100 MHz, with a signal bandwidth of 1.56 MHz. 5 level quantizer.</p>
+<p>In this brief, i will not put too much math, just concentrate on keywords.<a id="more"></a></p>
+</blockquote>
+<h2 id="Conventional second-order">Conventional second-order</h2><p>The setting is as follows:</p>
+<blockquote>
+<p>The output spectrum of the conventional second- order modulator and the proposed two-channel TI version with -6dBFS(not sure), 152.59-kHz sinusoidal input. For both modulators, the internal clock frequency was set to 100 MHz, with a signal bandwidth of 1.56 MHz. 5 level quantizer.</p>
 </blockquote>
 <p>The structure is the most basic, the integrator block is ideal:<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy7hgcj4hj20us092aar.jpg" alt="image"><br>and the performance is 64.8dB<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewy7tt3zm1j20xc0p1gti.jpg" alt="image"></p>
 <h2 id="Type-I block digital filtering">Type-I block digital filtering</h2><p>The block digital filtering has facilitated the design and construction of a true TI &#x2206;&#x3A3; modulator, traditional SDM is single input and single output, the block digital filtering helps it to become a MIMO system:<br><img src="http://ww1.sinaimg.cn/mw690/7cb9c6e5gw1ewy8czhyp5j20ry0i20ud.jpg" alt="image"><br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy85jyux9j215z0cf75z.jpg" alt="image"><br>some paper includes the k-factor,The k-factor is used to deal with the issue of opamp DC offsets. DC offsets are problematic in TISDM because the difference in offset between the two branches drives the modulator to instability. Reducing the cross-coupling coefficients gives more control to each parallel &#x2206;&#x3A3; modulator, thus enabling the negative feedback loop to adjust, which maintains DC stability. </p>
