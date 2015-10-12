@@ -10,14 +10,11 @@
 
 conventional second-order
 Type-I block digital filtering
+the directly 2-path
 Type-II output prediction scheme
 supplement
 1. ZI-TI
-
-
-
-&amp;lt;!-- tocstop --&amp;gt;
-conventional second-orderType-I">
+2. output prediction scheme det">
 <meta property="og:type" content="article">
 <meta property="og:title" content="the baisc model of time-interleaved sigma-deta converters">
 <meta property="og:url" content="http://yoursite.com/2015/10/06/TI-SDM-basic/index.html">
@@ -27,15 +24,22 @@ conventional second-orderType-I">
 
 conventional second-order
 Type-I block digital filtering
+the directly 2-path
 Type-II output prediction scheme
 supplement
 1. ZI-TI
-
-
-
-&amp;lt;!-- tocstop --&amp;gt;
-conventional second-orderType-I">
-<meta property="og:updated_time" content="2015-10-07T08:35:24.000Z">
+2. output prediction scheme det">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy7hgcj4hj20us092aar.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewy7tt3zm1j20xc0p1gti.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/7cb9c6e5gw1ewy8czhyp5j20ry0i20ud.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy85jyux9j215z0cf75z.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy89r7x6qj20xc0p1wmf.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy8zqjcvbj20xc0p1jz8.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewyaf7n4dlj210z0c975p.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg">
+<meta property="og:updated_time" content="2015-10-12T05:45:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the baisc model of time-interleaved sigma-deta converters">
 <meta name="twitter:description" content="&amp;#x76EE;&amp;#x5F55;&amp;#xFF1A;
@@ -43,14 +47,11 @@ conventional second-orderType-I">
 
 conventional second-order
 Type-I block digital filtering
+the directly 2-path
 Type-II output prediction scheme
 supplement
 1. ZI-TI
-
-
-
-&amp;lt;!-- tocstop --&amp;gt;
-conventional second-orderType-I">
+2. output prediction scheme det">
   
     <link rel="alternative" href="/atom.xml" title="hello" type="application/atom+xml">
   
@@ -252,14 +253,90 @@ conventional second-orderType-I">
 <ul>
 <li><a href="#conventional second-order">conventional second-order</a></li>
 <li><a href="#Type-I block digital filtering">Type-I block digital filtering</a></li>
+<li><a href="#the directly 2-path">the directly 2-path</a></li>
 <li><a href="#Type-II output prediction scheme">Type-II output prediction scheme</a></li>
 <li><a href="#supplement">supplement</a><ul>
 <li><a href="#1. ZI-TI">1. ZI-TI</a></li>
+<li><a href="#2. output prediction scheme details">2. output prediction scheme details</a></li>
 </ul>
 </li>
+<li><a href="#comparsion table">comparsion table</a></li>
 </ul>
 <!-- tocstop -->
-<h2 id="conventional second-order">conventional second-order</h2><h2 id="Type-I block digital filtering">Type-I block digital filtering</h2><h2 id="Type-II output prediction scheme">Type-II output prediction scheme</h2><h2 id="supplement">supplement</h2><h3 id="1. ZI-TI">1. ZI-TI</h3>
+<p>Here I just want to list the traditional interleaved techs as my back up, the simulations are done in matlab following the franco maloberti&#x2019;s setting, I hope I got a better understanging after the organization of papers and thesis.</p>
+<blockquote>
+<p>in this brief, i will not put too much math, just concentrate on keywords</p>
+</blockquote>
+<h2 id="conventional second-order">conventional second-order</h2><p>the setting is as follows:</p>
+<blockquote>
+<p>the output spectrum of the conventional second- order modulator and the proposed two-channel TI version with -6dBFS(not sure), 152.59-kHz sinusoidal input. For both modulators, the internal clock frequency was set to 100 MHz, with a signal bandwidth of 1.56 MHz. 5 level quantizer.</p>
+</blockquote>
+<p>the struture is the most basic, the integtor block is ideal:<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy7hgcj4hj20us092aar.jpg" alt="image"><br>and the performance is 64.8dB<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewy7tt3zm1j20xc0p1gti.jpg" alt="image"></p>
+<h2 id="Type-I block digital filtering">Type-I block digital filtering</h2><p>The block digital filtering has facilitated the design and construction of a true TI &#x2206;&#x3A3; modulator, traditional SDM is single input and single output, the block digital filtering helps it to become a MIMO system:<br><img src="http://ww1.sinaimg.cn/mw690/7cb9c6e5gw1ewy8czhyp5j20ry0i20ud.jpg" alt="image"><br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy85jyux9j215z0cf75z.jpg" alt="image"><br>some paper inculdes the k-factor,The k-factor is used to deal with the issue of opamp DC offsets. DC offsets are problematic in TISDM because the difference in offset between the two branches drives the modulator to instability. Reducing the cross-coupling coefficients gives more control to each parallel &#x2206;&#x3A3; modulator, thus enabling the negative feedback loop to adjust, which maintains DC stability. </p>
+<p>However, reducing k from unity modifies the STF and results in an increase of the quantization noise in the signal band, thereby reducing the SNDR. The choice of k is a tradeoff between the offset value that the modulator can tolerate and the achievable SNR.<br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy89r7x6qj20xc0p1wmf.jpg" alt="image"><br>we can see 2-path means we double the sampling frequency, and the SNR performance increases 15dB as we expected, because here we just use ideal components, so we didn&#x2019;t put the k-factor into count.</p>
+<h2 id="the directly 2-path">the directly 2-path</h2><p>the  newbie may think repeating single path is call TI-SDM, yes, it is, but it&#x2019;s not just easy. for a reminder, the 2-path wil increase $$$z$$$ to $$$z^{2}$$$, so as usually peopele use such kind SDM as a bandpass one. for example, you can easily find 4-path TI-SDM locating the center frequency at fs/2. what&#x2019;s more, if you look at the NTF:<br>$$NTF=(1-z^{-2})^{2}=(1-z^{-1})^{2}(1+z^{-1})^{2}$$<br>therefore, a plain two-path second-oder scheme experiences a loss in SNR of 12dB. and the simuation result poroves it.<br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy8zqjcvbj20xc0p1jz8.jpg" alt="image"><br>and we can notice the pwd has a drop at fs/2, which also proves the bandpass feature of this kind TI-SDM.</p>
+<h2 id="Type-II output prediction scheme">Type-II output prediction scheme</h2><p>one problem of TI-SDM is the hardware doubles as well as the mismatch problem occurs. and one special problem for TI-SDM is the quantitizer dumino, which means the output of one quantitizer can not be put into input of another quantitizer directly. this is due to the recursive operation of SDM.</p>
+<p>however, we can use an incomplete integrator output for the input of the second quantizer in order to eliminate the quantizer domino. Incomplete integrator output is the complete integrator output without the modulator output terms.</p>
+<blockquote>
+<p>the drawback is the large number of levels for the second quantizer(the performance usually drops) and <strong>the global feedback DAC</strong>(not undertand)</p>
+</blockquote>
+<p><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewyaf7n4dlj210z0c975p.jpg" alt="image"><br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg" alt="image"><br>the SNR=77.9dB,and we have 3dB loss, not has good as we expected, and I am looking for the reason, I think it may due to the stability.</p>
+<h2 id="supplement">supplement</h2><h3 id="1. ZI-TI">1. ZI-TI</h3><p>A high-speed demux is needed at the input of the modulator to sample the input-signal and distribute it to the individual internal modulators. The demux operates at the full speed of the overall TI structure. For example, for a time-interleaving factor of 4, the demux operates at four times the speed of the individual &#x2206;&#x3A3; modulators. </p>
+<p>A solution to the demux problem for J=2 is to sample each branch at a different phase of the two non-overlapping clocks. Therefore, the demux is inherent in the operation of the modulator. Another more general solution that can be used for any J is called the zero-insertion interpolation technique, it keeps one input J times the original imput power, and leaves other inputs as zero. for example, we use this tech on the block digital filtering TI-SDM:<br><img src="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg" alt="image"><br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg" alt="image"><br>and by arranging the quantitizer outputs, the perfomance losses 2dB, becoming 79.1dB, which is still acceptable. so it has two problems:</p>
+<ol>
+<li>The input signal amplification causes the ZITI modulator to become unstable at smaller input levels than the traditional TI modulator, because we will increase power at one input!</li>
+<li>The ZITI modulator still suffers from DC offsets, so I think it&#x2019;s not so suitable for low-pass case unless the DC offset tone is out of band of your interests.</li>
+</ol>
+<h3 id="2. output prediction scheme details">2. output prediction scheme details</h3><p> to be continue&#x2026;</p>
+<h2 id="comparsion table">comparsion table</h2><table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Q1</th>
+<th>Q2</th>
+<th>perfrmance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traditional SDM</td>
+<td>5</td>
+<td>0</td>
+<td>64.8dB</td>
+</tr>
+<tr>
+<td>Traditional SDM(2fs)</td>
+<td>5</td>
+<td>0</td>
+<td>80.8dB</td>
+</tr>
+<tr>
+<td>TI-SDM(blocking digital filtering)</td>
+<td>5</td>
+<td>5</td>
+<td>80.8dB</td>
+</tr>
+<tr>
+<td>ZITI-SDM(blocking digital filtering)</td>
+<td>5</td>
+<td>5</td>
+<td>79.1dB</td>
+</tr>
+<tr>
+<td>TI-SDM(normal)</td>
+<td>5</td>
+<td>5</td>
+<td>67.5dB</td>
+</tr>
+<tr>
+<td>TI-SDM(output prediction)</td>
+<td>5</td>
+<td>11</td>
+<td>77.9dB</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
