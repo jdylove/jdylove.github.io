@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>the basic model of time-interleaved sigma-deta converters | hello</title>
+  <title>The basic model of time-interleaved sigma-deta converters | hello</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="目录：
 &amp;lt;!-- toc --&amp;gt;
@@ -17,9 +17,9 @@ Supplement
 2. Output prediction scheme details
 
 
-comparison tab">
+Comparison tab">
 <meta property="og:type" content="article">
-<meta property="og:title" content="the basic model of time-interleaved sigma-deta converters">
+<meta property="og:title" content="The basic model of time-interleaved sigma-deta converters">
 <meta property="og:url" content="http://yoursite.com/2015/10/06/TI-SDM-basic/index.html">
 <meta property="og:site_name" content="hello">
 <meta property="og:description" content="目录：
@@ -34,7 +34,7 @@ Supplement
 2. Output prediction scheme details
 
 
-comparison tab">
+Comparison tab">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy7hgcj4hj20us092aar.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ewy7tt3zm1j20xc0p1gti.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/7cb9c6e5gw1ewy8czhyp5j20ry0i20ud.jpg">
@@ -45,9 +45,9 @@ comparison tab">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewyajaog68j20xc0p1jz8.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/7cb9c6e5gw1ewy96azpglj211y0bbq4b.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ewy97oataij20xc0p1gtf.jpg">
-<meta property="og:updated_time" content="2015-10-13T09:35:39.000Z">
+<meta property="og:updated_time" content="2015-10-13T09:38:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="the basic model of time-interleaved sigma-deta converters">
+<meta name="twitter:title" content="The basic model of time-interleaved sigma-deta converters">
 <meta name="twitter:description" content="目录：
 &amp;lt;!-- toc --&amp;gt;
 
@@ -60,7 +60,7 @@ Supplement
 2. Output prediction scheme details
 
 
-comparison tab">
+Comparison tab">
   
     <link rel="alternative" href="/atom.xml" title="hello" type="application/atom+xml">
   
@@ -237,7 +237,7 @@ comparison tab">
         
   
     <h1 class="article-title" itemprop="name">
-      the basic model of time-interleaved sigma-deta converters
+      The basic model of time-interleaved sigma-deta converters
     </h1>
   
 
@@ -269,7 +269,7 @@ comparison tab">
 <li><a href="#2. Output prediction scheme details">2. Output prediction scheme details</a></li>
 </ul>
 </li>
-<li><a href="#comparison table">comparison table</a></li>
+<li><a href="#Comparison table">Comparison table</a></li>
 </ul>
 <!-- tocstop -->
 <p>Here I just want to list the traditional interleaved techs as my back up, the simulations are done in matlab following the franco maloberti&#x2019;s setting, I hope I got a better understanding after the organization of papers and thesis.</p>
@@ -296,11 +296,12 @@ comparison tab">
 <li>The input signal amplification causes the ZITI modulator to become unstable at smaller input levels than the traditional TI modulator, because we will increase power at one input!</li>
 <li>The ZITI modulator still suffers from DC offsets, so I think it&#x2019;s not so suitable for low-pass case unless the DC offset tone is out of band of your interests.</li>
 </ul>
-<h3 id="2. Output prediction scheme details">2. Output prediction scheme details</h3><p>by interation the output can be done within several steps, and the finall results are the same as the franco&#x2019;s paper:<br>$$v_{1,2}(n)=\frac{0.5z^{-1}}{1-z^{-1}} [x_1(n)-y_1(n)+x_2(n)-y_2(n)]$$</p>
+<h3 id="2. Output prediction scheme details">2. Output prediction scheme details</h3><p>by interation the output can be done within several steps, and the finall results are the same as the franco&#x2019;s paper:</p>
+<p>$$v_{1,2}(n)=\frac{0.5z^{-1}}{1-z^{-1}} [x_1(n)-y_1(n)+x_2(n)-y_2(n)]$$</p>
 <p>$$v_{2,2}(n)=\frac{2z^{-1}}{1-z^{-1}} [2v_{1,2}(n)+0.5x_2(n)-y_1(n)-1.5y_2(n)]$$</p>
-<p>$$y_1(n)=Q[2v_{1,2}(n)-2y<em>2(n)+v\</em>{2,2}(n)]$$</p>
+<p>$$y_1(n)=Q[2v_{1,2}(n)-2y_2(n)+v_{2,2}(n)]$$</p>
 <p>$$y_1(n)=Q[v_{2,2}(n)]$$</p>
-<h2 id="comparison table">comparison table</h2><table>
+<h2 id="Comparison table">Comparison table</h2><table>
 <thead>
 <tr>
 <th>Structure</th>
@@ -397,7 +398,7 @@ comparison tab">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="TI-SDM-basic" data-title="the basic model of time-interleaved sigma-deta converters" data-url="http://yoursite.com/2015/10/06/TI-SDM-basic/"></div>
+	<div class="ds-thread" data-thread-key="TI-SDM-basic" data-title="The basic model of time-interleaved sigma-deta converters" data-url="http://yoursite.com/2015/10/06/TI-SDM-basic/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
