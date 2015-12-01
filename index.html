@@ -201,40 +201,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today I find 20G space disappeared in my My 128G Macbook, the problem really takes me about half hour to solve it. I didn&#x2019;t store too much photos and music, and I also didn&#x2019;t backup my time machine at local.</p>
+        <p>Today I find 20G space disappeared in my My 128G Macbook, the problem really takes me about half hour to solve it. I didn’t store too much photos and music, and I also didn’t backup my time machine at local.</p>
 <p>I really recommend you have a disk software in your out Mac, it can help you quickly find where the problem is:</p>
 <ol>
 <li><strong>daisy disk</strong>, a beautiful software which shows your space in a pie graph, and take your money at the same money.<br><img src="http://ww1.sinaimg.cn/mw690/7cb9c6e5gw1eykexrezumj21eo14s4cm.jpg" alt="image"></li>
-<li><strong>Disk Inventory X</strong>, is a ugly disk usage utility for Mac OS X 10.3 (and later), but functional.<br><img src="http://www.derlien.com/assets/main.jpg" alt="image"><!---->
-</li>
-</ol>
-<h2 id="The whole steps:">The whole steps:</h2><p>my problem is the garbage under <code>/private/var/vm</code>, to open it , <code>shift+command+G</code> in the finder, and go to <code>/</code> to find your garbage file, and of course you have to show all the hidden files.</p>
-<p><code>/var/vm/sleepimage</code> is used to store the contents of the RAM during hibernation.<br><code>/var/vm/swapfile</code> is the Mac Virtual Memory.</p>
-<ul>
-<li>disable hibernation mode:</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pmset -<span class="tag">a</span> hibernatemode <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>delete /private/var/vm/sleepimage:</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /<span class="keyword">private</span>/<span class="keyword">var</span>/vm/sleepimage</span><br></pre></td></tr></table></figure>
-<ul>
-<li>create an empty file and name it &#x2018;sleepimage&#x2019;:</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo touch /<span class="keyword">private</span>/<span class="keyword">var</span>/vm/sleepimage</span><br></pre></td></tr></table></figure>
-<ul>
-<li>change its flag to immutable:</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chflags schg /<span class="keyword">private</span>/<span class="keyword">var</span>/vm/sleepimage</span><br></pre></td></tr></table></figure>
-<ul>
-<li>delete the swap files</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /<span class="keyword">private</span>/<span class="keyword">var</span>/vm/swapfile*</span><br></pre></td></tr></table></figure>
-<h3 id="the refereence link:">the refereence link:</h3><ol>
-<li><a href="http://apple.stackexchange.com/questions/50235/what-i-can-delete-from-private-var-vm" target="_blank" rel="external">http://apple.stackexchange.com/questions/50235/what-i-can-delete-from-private-var-vm</a></li>
-<li><a href="http://apple.stackexchange.com/questions/84784/128gb-ssd-and-23gb-of-sleep-image-swap-file-what-to-do" target="_blank" rel="external">http://apple.stackexchange.com/questions/84784/128gb-ssd-and-23gb-of-sleep-image-swap-file-what-to-do</a></li>
-</ol>
-
+<li><strong>Disk Inventory X</strong>, is a ugly disk usage utility for Mac OS X 10.3 (and later), but functional.<br><img src="http://www.derlien.com/assets/main.jpg" alt="image">
       
     </div>
     
@@ -247,6 +218,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/01/how-to-find-the-missing-space-in-my-Macbook/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
