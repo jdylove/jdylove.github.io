@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://jdylove.github.io">
+  <title>hexo-yilia主题 instagram 抓取设置 | Hello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="整理自：
+Hexo主题Yilia
+拉取图片经验
+步骤如下：(不考虑被墙情况)
+1. 新建页面1hexo new page &quot;instagram&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-yilia主题 instagram 抓取设置">
+<meta property="og:url" content="http://jdylove.github.io/2015/09/17/instagram-setting/index.html">
+<meta property="og:site_name" content="Hello">
+<meta property="og:description" content="整理自：
+Hexo主题Yilia
+拉取图片经验
+步骤如下：(不考虑被墙情况)
+1. 新建页面1hexo new page &quot;instagram&quot;">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ew5bbxct1mj20ld0a8abc.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew5bd5i4qdj20kn0fjjtf.jpg">
+<meta property="og:updated_time" content="2015-10-06T07:46:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo-yilia主题 instagram 抓取设置">
+<meta name="twitter:description" content="整理自：
+Hexo主题Yilia
+拉取图片经验
+步骤如下：(不考虑被墙情况)
+1. 新建页面1hexo new page &quot;instagram&quot;">
+  
+    <link rel="alternative" href="/atom.xml" title="Hello" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-67873224-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Sam Jiang</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+				<li><a href="/tags/文摘">文摘</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="weibo" target="_blank" href="http://www.weibo.com/u/2092549861" title="weibo">weibo</a>
+		        
+					<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/dong-yang-2" title="zhihu">zhihu</a>
+		        
+					<a class="mail" target="_blank" href="/dongyang35@gmail.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Sam Jiang</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/img/avatar.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Sam Jiang</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/文摘">文摘</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="weibo" target="_blank" href="http://www.weibo.com/u/2092549861" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/dong-yang-2" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="/dongyang35@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-instagram-setting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo-yilia主题 instagram 抓取设置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>整理自：</p>
+<p><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87" target="_blank" rel="external">Hexo主题Yilia</a></p>
+<p><a href="http://litten.github.io/2014/03/03/instagram-api-ex/" target="_blank" rel="external">拉取图片经验</a></p>
+<p>步骤如下：(不考虑被墙情况)</p>
+<h2 id="1-_新建页面">1. 新建页面</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"instagram"</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2-_修改index-md">2. 修改index.md</h2><p>在目录yourBlog\source\instagram下，修改index.md内容为：</p>
+<pre><code><span class="comment">---</span>
+layout: post
+slug: <span class="string">"instagram"</span>
+title: <span class="string">"相册"</span>
+noDate: <span class="string">"true"</span>
+<span class="comment">---</span>
+
+&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"instagram"</span> data-client-<span class="property">id</span>=<span class="string">"ecfe77c0eb964a818361fbfaed595814"</span> data-user-<span class="property">id</span>=<span class="string">"7372224"</span>&gt;
+    &lt;a href=<span class="string">"http://instagram.com/jdongyang"</span> target=<span class="string">"_blank"</span> <span class="type">class</span>=<span class="string">"open-ins"</span>&gt;图片来自instagram，正在加载中…&lt;/a&gt;
+&lt;/<span class="keyword">div</span>&gt;
+&lt;<span class="keyword">script</span> src=<span class="string">"http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+&lt;<span class="keyword">script</span> src=<span class="string">"/js/jquery.lazyload.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+&lt;<span class="keyword">script</span> src=<span class="string">"/js/instagram.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;
+</code></pre><h2 id="3-_修改参数">3. 修改参数</h2><p><strong>data-client-id</strong>在 instagram api 注册后获得：<br>注意 redirect url 填你自己 blog 名：<br><img src="http://ww2.sinaimg.cn/large/7cb9c6e5gw1ew5bbxct1mj20ld0a8abc.jpg" alt=""><br>然后把有关的安全选项关闭：<br><img src="http://ww1.sinaimg.cn/large/7cb9c6e5gw1ew5bd5i4qdj20kn0fjjtf.jpg" alt=""><br>接下去获取验证(Client-Side (Implicit) Authentication)，这里我直接引用 instagram 官方文档：</p>
+<p><strong><em>Step One: Direct your user to our authorization URL</em></strong></p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/instagram.com/oauth</span><span class="regexp">/authorize/</span>?client_id=&#123;<span class="constant">CLIENT-ID&#125;</span>&amp;redirect_uri=&#123;<span class="constant">REDIRECT-URI&#125;</span>&amp;response_type=token</span><br></pre></td></tr></table></figure>
+<p><strong><del>注意不要把我的括号还留着</del></strong></p>
+<p>At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.</p>
+<p><strong><em>Step Two: Receive the access_token via the URL fragment</em></strong></p>
+<p>Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">http:</span>//your-redirect-uri<span class="preprocessor">#access_token=ACCESS-TOKEN</span></span><br></pre></td></tr></table></figure>
+<p>Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow</p>
+<p>那这样就拿到 token 了。</p>
+<p>另外, <strong>data-user-id</strong>属性，需要到<a href="http://jelled.com/instagram/lookup-user-id#" target="_blank" rel="external">lookup-user-id</a>查找并填写。</p>
+<p>赶紧试着用token调用api查看自己的图片吧：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https</span>:<span class="regexp">//</span>api.instagram.com<span class="regexp">/v1/users/</span>&#123;USER_ID&#125;<span class="regexp">/media/recent/</span>?access_token=&#123;TOKEN&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-_hexo_and_enjoy">4. hexo and enjoy</h2><p>应该可以了吧（笑）</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/09/17/instagram-setting/" class="archive-article-date">
+  	<time datetime="2015-09-17T03:34:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-09-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fun/">fun</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2015/09/23/ft/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          the relationship of FT,DFT, DTFT,DFS and FFT
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/09/16/fist/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">keynote 技巧分享</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="instagram-setting" data-title="hexo-yilia主题 instagram 抓取设置" data-url="http://jdylove.github.io/2015/09/17/instagram-setting/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jdylove"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Sam Jiang
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js" type="text/javascript"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/fun/" style="font-size: 20px;">fun</a> <a href="/tags/keynote/" style="font-size: 10px;">keynote</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/study/" style="font-size: 20px;">study</a> <a href="/tags/文摘/" style="font-size: 15px;">文摘</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">澳门大学 phd 学生，听音乐，调电路，常常在黑夜里想事情。</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
